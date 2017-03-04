@@ -1,0 +1,231 @@
+/*---------->  CSS RESET  <------------ */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*---------->  MY CSS <------------ */
+
+body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.game {
+    position: relative;
+    height: 85vh;
+    width: 85vh;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: black;
+    border-radius: 50%;
+    box-shadow: 10px 10px 5px #888888;
+    background: radial-gradient(gray 2%, black 49%, black 50%);
+}
+
+.console {
+    position: relative;
+    height: 30vh;
+    width: 30vh;
+    margin-left: 30%;
+    margin-top: 30%;
+    background-color: silver;
+    border-radius: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.consoleHeader {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-family: monospace;
+    font-weight: bolder;
+}
+
+.settings {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+p {
+    width: 33%;
+    text-align: center;
+    margin-bottom: 10%;
+    height: 1vh
+}
+
+.buttonContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.button {
+    height: 3vh;
+    width: 3vh;
+    border-radius: 50%;
+    background-color: yellow;
+    box-shadow: 3px 3px 5px #888888;
+    /*background: radial-gradient(yellow 50%, yellow 49%, #e6e600 1%);*/
+}
+
+.button2 {
+    height: 3vh;
+    width: 3vh;
+    border-radius: 1.5vh;
+    background-color: red;
+    box-shadow: 3px 3px 5px #888888;
+}
+
+
+/* The switch - the box around the slider */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    height: 8%;
+    margin-bottom: 5%;
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    display: none;
+}
+
+
+/*  -----------> The slider <---------------- */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    transition: .4s;
+    background: radial-gradient(gray 2%, #404040 49%, #404040 50%);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 70%;
+    width: 40%;
+    left: 5%;
+    bottom: 10%;
+    background-color: gray;
+    transition: .4s;
+    background: radial-gradient(gray 2%, black 49%, black 50%);
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+
+/*  ----------> PADS <--------------*/
+
+.yellowPad {
+    position: relative;
+    height: 43%;
+    width: 43%;
+    margin-top: 5.5%;
+    margin-left: 5.5%;
+    background-color: yellow;
+    /*opacity: .5;*/
+    border-radius: 320px 20px 20px;
+}
+
+.bluePad {
+    position: relative;
+    height: 43%;
+    width: 43%;
+    margin-top: 5.5%;
+    margin-left: 3%;
+    background-color: blue;
+    /*opacity: .5;*/
+    border-radius: 20px 320px 20px 20px;
+}
+
+.redPad {
+    position: relative;
+    height: 43%;
+    width: 43%;
+    margin-left: 5.5%;
+    margin-bottom: 1.5%;
+    background-color: red;
+    /*opacity: .5;*/
+    border-radius: 20px 20px 20px 320px;
+}
+
+.greenPad {
+    position: relative;
+    height: 43%;
+    width: 43%;
+    margin-left: 3%;
+    margin-bottom: 1.5%;
+    background-color: green;
+    /*opacity: .5;*/
+    border-radius: 20px 20px 320px 20px;
+}
