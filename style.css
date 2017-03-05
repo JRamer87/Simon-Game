@@ -79,6 +79,8 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 2;
+    background: radial-gradient(white 2%, silver 49%, silver 50%);
+    box-shadow: 0px 0px 6px white;
 }
 
 .consoleBackground {
@@ -87,19 +89,20 @@ body {
     width: 47%;
     margin-left: 26.5%;
     margin-top: 26.5%;
-    background-color: black;
+    background-color: #262626;
     border-radius: 50%;
     z-index: 1;
-    /*box-shadow: 3px 3px 3px 3px black;*/
-    background: radial-gradient(gray 2%, black 49%, black 50%);
+    box-shadow: 0px 0px 1px black;
+    /*background: radial-gradient(gray 2%, black 49%, black 50%);*/
 }
 
 .consoleHeader {
     width: 100%;
     text-align: center;
-    font-size: 40px;
+    font-size: 60px;
     font-family: monospace;
     font-weight: bolder;
+    margin-top: 12%;
 }
 
 .settings {
@@ -207,7 +210,9 @@ input:checked+.slider:before {
     margin-left: 7.5%;
     background-color: yellow;
     /*opacity: .5;*/
-    border-radius: 320px 20px 20px;
+    border-radius: 980px 20px 20px;
+    /*background: radial-gradient(white 10%, yellow 40%, yellow 50%);*/
+    box-shadow: 3px 3px 2px #bfbfbf;
 }
 
 .bluePad {
@@ -218,7 +223,9 @@ input:checked+.slider:before {
     margin-left: 7%;
     background-color: #33adff;
     /*opacity: .5;*/
-    border-radius: 20px 320px 20px 20px;
+    border-radius: 20px 980px 20px 20px;
+    /*background: radial-gradient(white 2%, #33adff 49%, #33adff 50%);*/
+    box-shadow: 3px 3px 2px #bfbfbf;
 }
 
 .redPad {
@@ -229,7 +236,9 @@ input:checked+.slider:before {
     margin-bottom: 1.5%;
     background-color: #ff3333;
     /*opacity: .5;*/
-    border-radius: 20px 20px 20px 320px;
+    border-radius: 20px 20px 20px 980px;
+    /*background: radial-gradient(white 2%, #ff3333 49%, #ff3333 50%);*/
+    box-shadow: 2px 2px 2px #bfbfbf;
 }
 
 .greenPad {
@@ -240,5 +249,7 @@ input:checked+.slider:before {
     margin-bottom: 1.5%;
     background-color: #00cc00;
     /*opacity: .5;*/
-    border-radius: 20px 20px 320px 20px;
+    border-radius: 20px 20px 980px 20px;
+    /*background: radial-gradient(white 2%, #00cc00 49%, #00cc00 50%);*/
+    box-shadow: 2px 2px 2px #bfbfbf;
 }
