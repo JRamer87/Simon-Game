@@ -67,9 +67,9 @@ body {
 }
 
 .console {
-    position: relative;
-    height: 30vh;
-    width: 30vh;
+    position: absolute;
+    height: 40%;
+    width: 40%;
     margin-left: 30%;
     margin-top: 30%;
     background-color: silver;
@@ -78,7 +78,20 @@ body {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    z-index: 2;
+}
+
+.consoleBackground {
+    position: absolute;
+    height: 47%;
+    width: 47%;
+    margin-left: 26.5%;
+    margin-top: 26.5%;
+    background-color: black;
+    border-radius: 50%;
     z-index: 1;
+    /*box-shadow: 3px 3px 3px 3px black;*/
+    background: radial-gradient(gray 2%, black 49%, black 50%);
 }
 
 .consoleHeader {
@@ -188,10 +201,10 @@ input:checked+.slider:before {
 
 .yellowPad {
     position: relative;
-    height: 43%;
-    width: 43%;
-    margin-top: 5.5%;
-    margin-left: 5.5%;
+    height: 39%;
+    width: 39%;
+    margin-top: 7%;
+    margin-left: 7.5%;
     background-color: yellow;
     /*opacity: .5;*/
     border-radius: 320px 20px 20px;
@@ -199,10 +212,10 @@ input:checked+.slider:before {
 
 .bluePad {
     position: relative;
-    height: 43%;
-    width: 43%;
-    margin-top: 5.5%;
-    margin-left: 3%;
+    height: 39%;
+    width: 39%;
+    margin-top: 7%;
+    margin-left: 7%;
     background-color: #33adff;
     /*opacity: .5;*/
     border-radius: 20px 320px 20px 20px;
@@ -210,9 +223,9 @@ input:checked+.slider:before {
 
 .redPad {
     position: relative;
-    height: 43%;
-    width: 43%;
-    margin-left: 5.5%;
+    height: 39%;
+    width: 39%;
+    margin-left: 7.5%;
     margin-bottom: 1.5%;
     background-color: #ff3333;
     /*opacity: .5;*/
@@ -221,9 +234,9 @@ input:checked+.slider:before {
 
 .greenPad {
     position: relative;
-    height: 43%;
-    width: 43%;
-    margin-left: 3%;
+    height: 39%;
+    width: 39%;
+    margin-left: 7%;
     margin-bottom: 1.5%;
     background-color: #00cc00;
     /*opacity: .5;*/
