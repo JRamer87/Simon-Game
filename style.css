@@ -235,6 +235,13 @@ input:checked+.slider:before {
     background: radial-gradient(white 2%, #ffff4d 48%, yellow 50%);
 }
 
+.yellowGlow {
+    background-color: yellow;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    background: radial-gradient(white 2%, #ffff4d 48%, yellow 50%);
+}
+
 .bluePad {
     position: relative;
     cursor: pointer;
@@ -249,6 +256,13 @@ input:checked+.slider:before {
 }
 
 .bluePad:active {
+    background-color: #0099ff;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    background: radial-gradient(white 2%, #33adff 48%, #33adff 50%);
+}
+
+.blueGlow {
     background-color: #0099ff;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
@@ -275,6 +289,13 @@ input:checked+.slider:before {
     background: radial-gradient(white 2%, #ff3333 48%, #ff3333 50%);
 }
 
+.redGlow {
+    background-color: #e60000;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    background: radial-gradient(white 2%, #ff3333 48%, #ff3333 50%);
+}
+
 .greenPad {
     position: relative;
     cursor: pointer;
@@ -289,6 +310,13 @@ input:checked+.slider:before {
 }
 
 .greenPad:active {
+    background-color: #009900;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    background: radial-gradient(white 2%, #00cc00 48%, #00cc00 50%);
+}
+
+.greenGlow {
     background-color: #009900;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
