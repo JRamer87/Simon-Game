@@ -32,12 +32,13 @@ $(document)
         $('.pads')
             .on('click', (event) => {
                 userArray.push(event.target.id);
-                console.log("userArray:", userArray);
-                console.log("patternArray:", pattern);
                 let patternId = '';
                 let userId = '';
-                console.log("userArray.length:", userArray.length);
-                console.log("patternArray.length:", pattern.length);
+                for (let i = 0; i < userArray.length; i++) {
+                    if (pattern[i][0].id !== userArray[i]) {
+                        alert("Sorry you missed one.  Try again!")
+                    }
+                }
                 if (pattern.length === userArray.length) {
                     for (var i = 0; i < pattern.length; i++) {
                         patternId = pattern[i][0].id;
@@ -47,10 +48,13 @@ $(document)
                         console.log("Matching:", patternId === userId);
                     }
                     if (patternId === userId) {
-                        // matching = true;
+                        matching = true;
                         updatePattern(colors);
                         displayPattern(pattern);
                         userArray = [];
+                    } else if (!matching) {
+                        alert('Sorry you missed one!  Try again!');
+
                     }
                 }
                 console.log("PatternArray:", pattern);
