@@ -33,27 +33,28 @@ $(document)
             .on('click', (event) => {
                 userArray.push(event.target.id);
                 console.log("userArray:", userArray);
-                console.log("Pattern:", pattern[0][0].id);
+                console.log("patternArray:", pattern);
                 let patternId = '';
                 let userId = '';
+                console.log("userArray.length:", userArray.length);
+                console.log("patternArray.length:", pattern.length);
                 if (pattern.length === userArray.length) {
                     for (var i = 0; i < pattern.length; i++) {
                         patternId = pattern[i][0].id;
-                        console.log("patternId:", patternId);
                     }
                     for (var j = 0; j < userArray.length; j++) {
                         userId = userArray[j];
-                        console.log("userId:", userId);
                         console.log("Matching:", patternId === userId);
-
+                    }
+                    if (patternId === userId) {
+                        // matching = true;
+                        updatePattern(colors);
+                        displayPattern(pattern);
+                        userArray = [];
                     }
                 }
-                if (patternId === userId) {
-                    matching = true;
-                    updatePattern(colors);
-                    displayPattern(pattern);
-                }
-                console.log("Pattern:", pattern);
+                console.log("PatternArray:", pattern);
+                console.log("UserArray:", userArray);
             });
 
 
@@ -95,10 +96,10 @@ $(document)
         //Displays the new pattern.   Toggles the glow class to show the new pattern
         function displayPattern(arr) {
             let i = 0;
+            myLoop();
 
             function myLoop() {
                 setTimeout(() => {
-                    console.log(i);
                     let currentColor = arr[i];
                     let currentColorId = currentColor[0].id;
                     $(currentColor)
@@ -111,8 +112,8 @@ $(document)
                     if (i < pattern.length) {
                         myLoop();
                     }
-                }, 1000)
+                }, 1000);
             }
-            myLoop();
         }
+
     });
