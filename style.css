@@ -105,6 +105,10 @@ body {
     margin-top: 12%;
 }
 
+.consoleText {
+    /*font-size: 400%;*/
+}
+
 .settings {
     display: flex;
     flex-flow: row wrap;
@@ -138,7 +142,6 @@ p {
 .button:active {
     background-color: yellow;
     box-shadow: 0 5px #666;
-    transform: translateY(4px);
 }
 
 .button2:active {
@@ -224,7 +227,7 @@ input:checked+.slider:before {
     margin-top: 7%;
     margin-left: 7.5%;
     background-color: #f4f401;
-    border-radius: 980px 20px 20px;
+    border-radius: 980% 20% 20%;
     box-shadow: 3px 3px 2px #bfbfbf;
 }
 
@@ -251,7 +254,8 @@ input:checked+.slider:before {
     margin-left: 7%;
     background-color: #0099ff;
     /*opacity: .5;*/
-    border-radius: 20px 980px 20px 20px;
+    border-radius: 20% 980% 20% 20%;
+    ;
     box-shadow: 3px 3px 2px #bfbfbf;
 }
 
@@ -278,7 +282,7 @@ input:checked+.slider:before {
     margin-bottom: 1.5%;
     background-color: #e60000;
     /*opacity: .5;*/
-    border-radius: 20px 20px 20px 980px;
+    border-radius: 20% 20% 20% 980%;
     box-shadow: 2px 2px 2px #bfbfbf;
 }
 
@@ -305,7 +309,7 @@ input:checked+.slider:before {
     margin-bottom: 1.5%;
     background-color: #009900;
     /*opacity: .5;*/
-    border-radius: 20px 20px 980px 20px;
+    border-radius: 20% 20% 980% 20%;
     box-shadow: 2px 2px 2px #bfbfbf;
 }
 

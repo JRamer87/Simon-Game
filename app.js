@@ -10,7 +10,6 @@ $(document)
         let pattern = [];
         let patternCount = 0;
         let userArray = [];
-        let userCount = 0;
         let activeGame = false;
         let power = false;
         let matching = false;
@@ -63,11 +62,6 @@ $(document)
 
 
 
-
-
-
-
-
         //Toggles the power to the game on or off
         function togglePower() {
             if (power) {
@@ -82,7 +76,6 @@ $(document)
         function initializeGame() {
             activeGame = true;
             patternCount = 0;
-            userCount = 0;
             pattern = [];
             userArray = [];
             updatePattern(colors);
