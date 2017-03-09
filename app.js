@@ -134,7 +134,7 @@ $(document)
             let userId;
             for (let i = 0; i < userArray.length; i++) {
                 if (pattern[i][0].id !== userArray[i]) {
-                    alert("Sorry you missed one.  Try again!")
+                    alert("Sorry you missed one.  Try again!");
                 }
             }
             if (pattern.length === userArray.length) {
@@ -162,7 +162,7 @@ $(document)
         //Toggles the glow class
         function toggleYellow() {
             $('.yellowPad')
-                .toggleClass('yellowGlow')
+                .toggleClass('yellowGlow');
             setTimeout(() => {
                 $('.yellowPad')
                     .removeClass('yellowGlow');
@@ -172,7 +172,7 @@ $(document)
         //Toggles the glow class
         function toggleBlue() {
             $('.bluePad')
-                .toggleClass('blueGlow')
+                .toggleClass('blueGlow');
             setTimeout(() => {
                 $('.bluePad')
                     .removeClass('blueGlow');
@@ -182,7 +182,7 @@ $(document)
         //Toggles the glow class
         function toggleRed() {
             $('.redPad')
-                .toggleClass('redGlow')
+                .toggleClass('redGlow');
             setTimeout(() => {
                 $('.redPad')
                     .removeClass('redGlow');
@@ -192,7 +192,7 @@ $(document)
         //Toggles the glow class
         function toggleGreen() {
             $('.greenPad')
-                .toggleClass('greenGlow')
+                .toggleClass('greenGlow');
             setTimeout(() => {
                 $('.greenPad')
                     .removeClass('greenGlow');

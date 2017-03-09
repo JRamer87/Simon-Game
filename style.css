@@ -56,6 +56,14 @@ body {
     font-size: 45px;
 }
 
+@media (max-width: 600px) {
+    .streakBox {
+        margin-top: 5%;
+        height: 10vh;
+        width: 15vh;
+    }
+}
+
 .streak {
     height: 100%;
     width: 100%;
@@ -71,19 +79,54 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 .game {
     position: relative;
-    height: 85vh;
-    width: 85vh;
+    height: 80vh;
+    width: 80vh;
     display: flex;
     flex-flow: row wrap;
     background-color: black;
     border-radius: 50%;
     box-shadow: 10px 10px 5px #888888;
     background: radial-gradient(gray 2%, black 49%, black 50%);
+}
+
+@media (max-width: 600px) {
+    .game {
+        height: 75vh;
+        width: 75vh;
+    }
+}
+
+@media (max-width: 520px) {
+    .game {
+        height: 65vh;
+        width: 65vh;
+    }
+}
+
+@media (max-width: 473px) {
+    .game {
+        height: 55vh;
+        width: 55vh;
+    }
+}
+
+@media (max-width: 390px) {
+    .game {
+        height: 50vh;
+        width: 50vh;
+    }
+}
+
+@media (max-width: 364px) {
+    .game {
+        height: 45vh;
+        width: 45vh;
+    }
 }
 
 .console {
@@ -125,6 +168,24 @@ body {
     margin-top: 12%;
 }
 
+@media (max-width: 600px) {
+    .consoleHeader {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 473px) {
+    .consoleHeader {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 320px) {
+    .consoleHeader {
+        font-size: 30px;
+    }
+}
+
 .consoleText {
     /*font-size: 400%;*/
 }
@@ -132,6 +193,7 @@ body {
 .settings {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
     width: 100%;
 }
 
@@ -139,7 +201,6 @@ p {
     width: 33%;
     text-align: center;
     margin-bottom: 10%;
-    height: 1vh
 }
 
 .buttonContainer {
