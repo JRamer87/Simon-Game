@@ -14,8 +14,6 @@ $(document)
         let activeGame = false;
         let power = false;
         let matching = true;
-        let yes = $('.yesButton');
-        let no = $('.noButton');
 
         //Turns the game on/off
         $('.slider')
@@ -70,9 +68,6 @@ $(document)
                         updateStreak();
                     }
                 }
-
-
-
             });
 
 
@@ -90,6 +85,7 @@ $(document)
         function initializeGame() {
             activeGame = true;
             patternCount = 0;
+            streak = 0;
             pattern = [];
             userArray = [];
             console.log("Game Active");
@@ -137,6 +133,7 @@ $(document)
             for (let i = 0; i < userArray.length; i++) {
                 if (pattern[i][0].id !== userArray[i]) {
                     toggleModal();
+
                 }
             }
             if (pattern.length === userArray.length) {
@@ -207,6 +204,26 @@ $(document)
             $('#modal')
                 .toggleClass("hideModal")
                 .toggleClass('showModal');
+            gameDecision();
+        }
+
+        function gameDecision() {
+            let yes = $('.yesModalButton');
+            let no = $('.noModalButton');
+            $(yes)
+                .on("click", () => {
+                    console.log("you clicked yes");
+                    toggleModal();
+                    initializeGame();
+                    updateStreak();
+                    updatePattern(colors);
+                    displayPattern(pattern);
+                });
+            $(no)
+                .on("click", () => {
+                    console.log("you clicked no");
+                    toggleModal();
+                });
         }
 
     });
