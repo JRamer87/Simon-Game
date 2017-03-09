@@ -35,6 +35,8 @@ $(document)
             .on('click', (event) => {
                 if (power === true && activeGame === true) {
                     updateUserArray(event, userArray);
+                    console.log("User Array:", userArray);
+                    console.log("Pattern Array:", pattern);
                     checkArrays();
                     updateStreak();
                 }
@@ -105,7 +107,6 @@ $(document)
 
             function myLoop() {
                 setTimeout(() => {
-
                     let currentColor = arr[i];
                     let currentColorId = currentColor[0].id;
                     $(currentColor)
@@ -207,23 +208,46 @@ $(document)
             gameDecision();
         }
 
+
         function gameDecision() {
             let yes = $('.yesModalButton');
             let no = $('.noModalButton');
             $(yes)
-                .on("click", () => {
-                    console.log("you clicked yes");
+                .on("click", (ev) => {
+                    ev.preventDefault();
                     toggleModal();
                     initializeGame();
                     updateStreak();
                     updatePattern(colors);
-                    displayPattern(pattern);
+                    setTimeout(() => {
+                        displayPattern(pattern);
+                    })
                 });
+            // $(yes)
+            //     .on("keyup", () => {
+            //         if (event.which === 13) {
+            //             toggleModal();
+            //             initializeGame();
+            //             updateStreak();
+            //             updatePattern(colors);
+            //             displayPattern(pattern);
+            //         }
+            //     });
             $(no)
-                .on("click", () => {
-                    console.log("you clicked no");
+                .on("click", (ev) => {
+                    ev.preventDefault();
                     toggleModal();
+                    initializeGame();
+                    updateStreak();
                 });
+            // $(no)
+            //     .on("keyup", () => {
+            //         if (event.which === 13) {
+            //             toggleModal();
+            //             initializeGame();
+            //             updateStreak();
+            //         }
+            //     });
         }
 
     });
