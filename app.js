@@ -14,6 +14,8 @@ $(document)
         let activeGame = false;
         let power = false;
         let matching = true;
+        let yes = $('.yesButton');
+        let no = $('.noButton');
 
         //Turns the game on/off
         $('.slider')
@@ -134,7 +136,7 @@ $(document)
             let userId;
             for (let i = 0; i < userArray.length; i++) {
                 if (pattern[i][0].id !== userArray[i]) {
-                    alert("Sorry you missed one.  Try again!");
+                    toggleModal();
                 }
             }
             if (pattern.length === userArray.length) {
@@ -150,7 +152,7 @@ $(document)
                     userArray = [];
                     streak += 1;
                 } else if (!matching) {
-                    alert('Sorry you missed one!  Try again!');
+                    toggleModal();
                 }
             }
         }
@@ -197,6 +199,14 @@ $(document)
                 $('.greenPad')
                     .removeClass('greenGlow');
             }, 500);
+        }
+
+
+        //Shows/Hides the modal
+        function toggleModal() {
+            $('#modal')
+                .toggleClass("hideModal")
+                .toggleClass('showModal');
         }
 
     });
