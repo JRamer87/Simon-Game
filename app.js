@@ -10,6 +10,7 @@ $(document)
         let pattern = [];
         let patternCount = 0;
         let streak = 0;
+        let longest = [];
         let userArray = [];
         let activeGame = false;
         let power = false;
@@ -117,7 +118,7 @@ $(document)
                             .removeClass(`${currentColorId}Glow`);
                     }, 500);
                     i += 1;
-                    if (i < pattern.length) {
+                    if (i < arr.length) {
                         myLoop();
                     }
                 }, 1000);
@@ -145,6 +146,9 @@ $(document)
                     userId = userArray[i];
                 }
                 if (patternId === userId) {
+                    if (pattern.length >= longest.length) {
+                        longest = pattern;
+                    }
                     matching = true;
                     updatePattern(colors);
                     displayPattern(pattern);
@@ -251,12 +255,19 @@ $(document)
             //     });
         }
 
-
         $('#lastButton')
             .on("click", () => {
                 if (activeGame === false) {
                     displayPattern(pattern);
                 }
                 console.log("Pattern:", pattern);
+            });
+        $('#longestButton')
+            .on("click", () => {
+                if (activeGame === false) {
+
+                    displayPattern(longest);
+                }
+                console.log("Longest:", longest);
             });
     });
