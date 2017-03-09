@@ -203,6 +203,18 @@ p {
     margin-bottom: 10%;
 }
 
+@media (max-width: 473px) {
+    p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 365px) {
+    p {
+        font-size: 10px;
+    }
+}
+
 .buttonContainer {
     display: flex;
     flex-flow: row wrap;
@@ -295,6 +307,30 @@ input:focus+.slider {
 
 input:checked+.slider:before {
     transform: translateX(26px);
+}
+
+@media (max-width: 600px) {
+    input:checked+.slider:before {
+        transform: translateX(20px);
+    }
+}
+
+@media (max-width: 473px) {
+    input:checked+.slider:before {
+        transform: translateX(16px);
+    }
+}
+
+@media (max-width: 390px) {
+    input:checked+.slider:before {
+        transform: translateX(14px);
+    }
+}
+
+@media (max-width: 363px) {
+    input:checked+.slider:before {
+        transform: translateX(12px);
+    }
 }
 
 
