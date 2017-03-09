@@ -28,6 +28,7 @@ $(document)
                     initializeGame();
                     updatePattern(colors);
                     displayPattern(pattern);
+                    updateStreak();
                 }
             });
 
@@ -134,7 +135,7 @@ $(document)
             for (let i = 0; i < userArray.length; i++) {
                 if (pattern[i][0].id !== userArray[i]) {
                     toggleModal();
-
+                    activeGame = false;
                 }
             }
             if (pattern.length === userArray.length) {
@@ -151,6 +152,7 @@ $(document)
                     streak += 1;
                 } else if (!matching) {
                     toggleModal();
+                    activeGame = false;
                 }
             }
         }
@@ -221,7 +223,7 @@ $(document)
                     updatePattern(colors);
                     setTimeout(() => {
                         displayPattern(pattern);
-                    })
+                    }, 500);
                 });
             // $(yes)
             //     .on("keyup", () => {
@@ -237,7 +239,6 @@ $(document)
                 .on("click", (ev) => {
                     ev.preventDefault();
                     toggleModal();
-                    initializeGame();
                     updateStreak();
                 });
             // $(no)
@@ -250,4 +251,12 @@ $(document)
             //     });
         }
 
+
+        $('#lastButton')
+            .on("click", () => {
+                if (activeGame === false) {
+                    displayPattern(pattern);
+                }
+                console.log("Pattern:", pattern);
+            });
     });
