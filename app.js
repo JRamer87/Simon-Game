@@ -37,7 +37,6 @@ $(document)
             .on('click', (event) => {
                 if (power === true && activeGame === true) {
                     playSound();
-                    console.log(event.target.id);
                     updateUserArray(event, userArray);
                     checkArrays();
                     updateStreak();
