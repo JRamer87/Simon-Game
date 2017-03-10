@@ -36,9 +36,9 @@ $(document)
         $('.pads')
             .on('click', (event) => {
                 if (power === true && activeGame === true) {
+                    playSound();
+                    console.log(event.target.id);
                     updateUserArray(event, userArray);
-                    console.log("User Array:", userArray);
-                    console.log("Pattern Array:", pattern);
                     checkArrays();
                     updateStreak();
                 }
@@ -51,22 +51,26 @@ $(document)
                 if (power === true && activeGame === true) {
                     if (event.which === 219) {
                         userArray.push($yellow[0].id);
+                        yellowSound();
                         toggleYellow();
                         checkArrays();
                         updateStreak();
                     } else if (event.which === 221) {
                         userArray.push($blue[0].id);
+                        blueSound();
                         toggleBlue();
                         checkArrays();
                         updateStreak();
 
                     } else if (event.which === 13) {
                         userArray.push($green[0].id);
+                        greenSound();
                         toggleGreen();
                         checkArrays();
                         updateStreak();
                     } else if (event.which === 222) {
                         userArray.push($red[0].id);
+                        redSound();
                         toggleRed();
                         checkArrays();
                         updateStreak();
@@ -79,10 +83,8 @@ $(document)
         function togglePower() {
             if (power) {
                 power = false;
-                console.log("Power Off");
             } else {
                 power = true;
-                console.log("Power On");
             }
         }
         //Configures the initial game state
@@ -92,7 +94,6 @@ $(document)
             streak = 0;
             pattern = [];
             userArray = [];
-            console.log("Game Active");
         }
 
         //Updates the pattern with an additional color
@@ -111,6 +112,7 @@ $(document)
                 setTimeout(() => {
                     let currentColor = arr[i];
                     let currentColorId = currentColor[0].id;
+                    displayAndPlay(currentColorId);
                     $(currentColor)
                         .toggleClass(`${currentColorId}Glow`);
                     setTimeout(() => {
@@ -135,6 +137,7 @@ $(document)
             let userId;
             for (let i = 0; i < userArray.length; i++) {
                 if (pattern[i][0].id !== userArray[i]) {
+                    wrongSound();
                     toggleModal();
                     activeGame = false;
                 }
@@ -155,6 +158,7 @@ $(document)
                     userArray = [];
                     streak += 1;
                 } else if (!matching) {
+                    wrongSound();
                     toggleModal();
                     activeGame = false;
                 }
@@ -260,7 +264,6 @@ $(document)
                 if (activeGame === false) {
                     displayPattern(pattern);
                 }
-                console.log("Pattern:", pattern);
             });
         $('#longestButton')
             .on("click", () => {
@@ -268,6 +271,54 @@ $(document)
 
                     displayPattern(longest);
                 }
-                console.log("Longest:", longest);
             });
+
+        function greenSound() {
+            document.getElementById("greenSound")
+                .play();
+        }
+
+        function redSound() {
+            document.getElementById("redSound")
+                .play();
+        }
+
+        function blueSound() {
+            document.getElementById("blueSound")
+                .play();
+        }
+
+        function yellowSound() {
+            document.getElementById("yellowSound")
+                .play();
+        }
+
+        function playSound() {
+            if (event.target.id === "yellow") {
+                yellowSound();
+            } else if (event.target.id === "blue") {
+                blueSound();
+            } else if (event.target.id === "red") {
+                redSound();
+            } else if (event.target.id === "green") {
+                greenSound();
+            }
+        }
+
+        function displayAndPlay(currentColorId) {
+            if (currentColorId === "yellow") {
+                yellowSound();
+            } else if (currentColorId === "blue") {
+                blueSound();
+            } else if (currentColorId === "red") {
+                redSound();
+            } else if (currentColorId === "green") {
+                greenSound();
+            }
+        }
+
+        function wrongSound() {
+            document.getElementById("wrongSound")
+                .play();
+        }
     });
