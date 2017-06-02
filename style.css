@@ -398,7 +398,6 @@ input:checked+.slider:before {
     margin-left: 7.5%;
     margin-bottom: 1.5%;
     background-color: #e60000;
-    /*opacity: .5;*/
     border-radius: 20% 20% 20% 980%;
     box-shadow: 2px 2px 2px #bfbfbf;
 }
