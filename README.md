@@ -1,4 +1,9 @@
 # Retro Simon Game
+
+<div align="center">
+<img src="https://github.com/JonDRamer/Simon-Game/blob/master/screenshots/Original%20Simon%20Box.jpg"/>
+</div>
+
 ![App Screenshot](https://github.com/JonDRamer/Simon-Game/blob/master/screenshots/Original%20Simon%20Box.jpg)
 
 
