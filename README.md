@@ -1,4 +1,8 @@
 # Retro Simon Game
+![App Screenshot](https://github.com/JonDRamer/Simon-Game/blob/master/screenshots/Original%20Simon%20Game.png)
+
+
+### Final Design
 ![App Screenshot](https://github.com/JonDRamer/Simon-Game/blob/master/screenshots/Simon%20Powered%20Off.png)
 
 ### Technologies used:
