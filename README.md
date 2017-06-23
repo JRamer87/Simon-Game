@@ -13,6 +13,7 @@
 ###### CSS3
 ###### Javascript
 ###### JQuery
+###### Deployed with Surge
 
 ### Goal
 ###### To re-create the Simon memory game created by Milton Bradley in 1978.  I tried to make the game feel as authentic as possible.  I followed the style of the original game as closely as possible.  
