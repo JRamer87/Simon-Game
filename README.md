@@ -23,14 +23,6 @@
 
 ###### I had a problem with displaying the pattern properly.  I was trying to loop through an array and toggle a class that lit up the correct color in the pattern.  I was trying to use a for loop, but the iterations happened so quickly that all of the colors were just lighting up at the same time.  I tried everything I could think of to delay the iterations in the for loop with no success.  I eventually did some research and came up with a custom recursive solution that used setTimeouts to control the speed of the toggling and the incrementation through the array.  
 
-### App Walkthrough
+### Click The Image Below to See a Video Walkthrough
 
-### Posts View
-
-###### From here you can view all of the posts in your feed.  You can see how long ago the post was made.  You can also see how many up-votes and comments a post has received.  
-
-![App Screenshot]()
-
-### Edit Post View
-
-###### From this page you can edit the content of a post.  When you click the edit post button the form is pre-filled with the existing information from the post.  This allows you to only update the specific items that need to be updated.
+[![Video Walkthrough]()](https://www.youtube.com/watch?v=2Aj8AI-fNWA)
