@@ -1,5 +1,5 @@
 # Retro Simon Game
-![App Screenshot](https://github.com/JonDRamer/Simon-Game/blob/master/screenshots/Original%20Simon%20Box.png)
+![App Screenshot](https://github.com/JonDRamer/Simon-Game/blob/master/screenshots/Original%20Simon%20Box.jpg)
 
 
 ### Final Design
