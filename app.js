@@ -44,6 +44,7 @@ $(document)
       });
 
 
+<<<<<<< HEAD
     // // ADD KEYUP EVENTS TO SELECT PADS
     // $(document)
     //   .keyup((event) => {
@@ -76,6 +77,40 @@ $(document)
     //       }
     //     }
     //   });
+=======
+    // ADD KEYUP EVENTS TO SELECT PADS
+    $(document)
+      .keyup((event) => {
+        if (power === true && activeGame === true) {
+          if (event.which === 219) {
+            userArray.push($yellow[0].id);
+            yellowSound();
+            toggleYellow();
+            checkArrays();
+            updateStreak();
+          } else if (event.which === 221) {
+            userArray.push($blue[0].id);
+            blueSound();
+            toggleBlue();
+            checkArrays();
+            updateStreak();
+
+          } else if (event.which === 13) {
+            userArray.push($green[0].id);
+            greenSound();
+            toggleGreen();
+            checkArrays();
+            updateStreak();
+          } else if (event.which === 222) {
+            userArray.push($red[0].id);
+            redSound();
+            toggleRed();
+            checkArrays();
+            updateStreak();
+          }
+        }
+      });
+>>>>>>> 71adf35348a3a56103088fb1004cf4aa41aef485
 
 
     //Toggles the power to the game on or off
@@ -139,6 +174,7 @@ $(document)
           wrongSound();
           toggleModal();
           activeGame = false;
+<<<<<<< HEAD
         }
       }
       if (pattern.length === userArray.length) {
@@ -162,6 +198,31 @@ $(document)
           activeGame = false;
         }
       }
+=======
+        }
+      }
+      if (pattern.length === userArray.length) {
+
+        for (var i = 0; i < pattern.length; i++) {
+          patternId = pattern[i][0].id;
+          userId = userArray[i];
+        }
+        if (patternId === userId) {
+          if (pattern.length >= longest.length) {
+            longest = pattern;
+          }
+          matching = true;
+          updatePattern(colors);
+          displayPattern(pattern);
+          userArray = [];
+          streak += 1;
+        } else if (!matching) {
+          wrongSound();
+          toggleModal();
+          activeGame = false;
+        }
+      }
+>>>>>>> 71adf35348a3a56103088fb1004cf4aa41aef485
     }
 
     function updateStreak() {

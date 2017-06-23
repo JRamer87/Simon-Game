@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 # Retro Simon Game
 ![App Screenshot](https://github.com/JonDRamer/Angular-PostgreSQL-Reddit-Clone/blob/master/screenshots/Reddit.png)
+=======
+# Simon
+A recreation of the original Simon game https://en.wikipedia.org/wiki/Simon_(game).
+>>>>>>> 71adf35348a3a56103088fb1004cf4aa41aef485
 
 ### Technologies used:
 
