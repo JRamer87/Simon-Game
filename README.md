@@ -29,5 +29,5 @@
 
 [![Video Walkthrough](https://github.com/JonDRamer/Simon-Game/blob/master/screenshots/Play%20Button.png)](https://www.youtube.com/watch?v=2Aj8AI-fNWA)
 <div align="center">
-  <img width="400px" src="https://github.com/JonDRamer/Simon-Game/blob/master/screenshots/Play%20Button.png)"
+  <img width="400px" src="https://github.com/JonDRamer/Simon-Game/blob/master/screenshots/Play%20Button.png)"/>
 </div>
