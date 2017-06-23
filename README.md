@@ -27,4 +27,4 @@
 
 ### Click The Image Below to See a Video Walkthrough
 
-[![Video Walkthrough](https://github.com/JonDRamer/Simon-Game/blob/master/screenshots/Play%20Button.png)](https://www.youtube.com/watch?v=2Aj8AI-fNWA)
+[![Video Walkthrough](https://github.com/JonDRamer/Simon-Game/blob/master/screenshots/Play%20Button.jpeg)](https://www.youtube.com/watch?v=2Aj8AI-fNWA)
