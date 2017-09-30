@@ -44,7 +44,6 @@ $(document)
       });
 
 
-<<<<<<< HEAD
     // // ADD KEYUP EVENTS TO SELECT PADS
     // $(document)
     //   .keyup((event) => {
@@ -77,7 +76,6 @@ $(document)
     //       }
     //     }
     //   });
-=======
     // ADD KEYUP EVENTS TO SELECT PADS
     $(document)
       .keyup((event) => {
@@ -110,8 +108,6 @@ $(document)
           }
         }
       });
->>>>>>> 71adf35348a3a56103088fb1004cf4aa41aef485
-
 
     //Toggles the power to the game on or off
     function togglePower() {
@@ -174,7 +170,6 @@ $(document)
           wrongSound();
           toggleModal();
           activeGame = false;
-<<<<<<< HEAD
         }
       }
       if (pattern.length === userArray.length) {
@@ -198,9 +193,6 @@ $(document)
           activeGame = false;
         }
       }
-=======
-        }
-      }
       if (pattern.length === userArray.length) {
 
         for (var i = 0; i < pattern.length; i++) {
@@ -222,7 +214,6 @@ $(document)
           activeGame = false;
         }
       }
->>>>>>> 71adf35348a3a56103088fb1004cf4aa41aef485
     }
 
     function updateStreak() {
