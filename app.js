@@ -35,6 +35,7 @@ $(document)
 
     $('.pads')
       .on('click', (event) => {
+        console.log(event);
         if (power === true && activeGame === true) {
           playSound();
           updateUserArray(event, userArray);
@@ -43,39 +44,6 @@ $(document)
         }
       });
 
-
-    // // ADD KEYUP EVENTS TO SELECT PADS
-    // $(document)
-    //   .keyup((event) => {
-    //     if (power === true && activeGame === true) {
-    //       if (event.which === 219) {
-    //         userArray.push($yellow[0].id);
-    //         yellowSound();
-    //         toggleYellow();
-    //         checkArrays();
-    //         updateStreak();
-    //       } else if (event.which === 221) {
-    //         userArray.push($blue[0].id);
-    //         blueSound();
-    //         toggleBlue();
-    //         checkArrays();
-    //         updateStreak();
-    //
-    //       } else if (event.which === 13) {
-    //         userArray.push($green[0].id);
-    //         greenSound();
-    //         toggleGreen();
-    //         checkArrays();
-    //         updateStreak();
-    //       } else if (event.which === 222) {
-    //         userArray.push($red[0].id);
-    //         redSound();
-    //         toggleRed();
-    //         checkArrays();
-    //         updateStreak();
-    //       }
-    //     }
-    //   });
     // ADD KEYUP EVENTS TO SELECT PADS
     $(document)
       .keyup((event) => {
@@ -160,6 +128,7 @@ $(document)
     //Updates the user array with the color they entered
     function updateUserArray(event, arr) {
       arr.push(event.target.id);
+      console.log(event.target.id);
     }
 
     function checkArrays() {
@@ -284,30 +253,12 @@ $(document)
             displayPattern(pattern);
           }, 500);
         });
-      // $(yes)
-      //     .on("keyup", () => {
-      //         if (event.which === 13) {
-      //             toggleModal();
-      //             initializeGame();
-      //             updateStreak();
-      //             updatePattern(colors);
-      //             displayPattern(pattern);
-      //         }
-      //     });
       $(no)
         .on("click", (ev) => {
           ev.preventDefault();
           toggleModal();
           updateStreak();
         });
-      // $(no)
-      //     .on("keyup", () => {
-      //         if (event.which === 13) {
-      //             toggleModal();
-      //             initializeGame();
-      //             updateStreak();
-      //         }
-      //     });
     }
 
     $('#lastButton')
