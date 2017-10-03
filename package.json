@@ -1,0 +1,24 @@
+{
+  "name": "Simon-Game-V1",
+  "version": "1.0.0",
+  "description": "<div align=\"center\"> <img src=\"https://github.com/JonDRamer/Simon-Game/blob/master/screenshots/Original%20Simon%20Box.jpg\"/> </div>",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JRamer87/Simon-Game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JRamer87/Simon-Game/issues"
+  },
+  "homepage": "https://github.com/JRamer87/Simon-Game#readme",
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
