@@ -49,11 +49,12 @@ body {
 
 .streakBox {
     height: 10vh;
-    width: 10vh;
+    width: 100vw;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    font-size: 45px;
+    font-size: 35px;
+    margin-top: 1%;
 }
 
 @media (max-width: 600px) {
@@ -72,14 +73,14 @@ body {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    font-size: 65px;
+    font-size: 35px;
 }
 
 .container {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    margin-top: 3%;
+    margin-top: 1%;
 }
 
 .game {
