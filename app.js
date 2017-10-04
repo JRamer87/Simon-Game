@@ -35,7 +35,6 @@ $(document)
 
     $('.pads')
       .on('click', (event) => {
-        console.log(event);
         if (power === true && activeGame === true) {
           playSound();
           updateUserArray(event, userArray);
@@ -128,7 +127,6 @@ $(document)
     //Updates the user array with the color they entered
     function updateUserArray(event, arr) {
       arr.push(event.target.id);
-      console.log(event.target.id);
     }
 
     function checkArrays() {
